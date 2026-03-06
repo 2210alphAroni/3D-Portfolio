@@ -32,27 +32,41 @@
     width:100%; height:100%;
     z-index: 0; pointer-events:none;
   }
+/* ── SIDEBAR NAV ── */
+.sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 58px;
+  height: 100vh;
+  background: rgba(5,13,21,0.9);
+  border-right: 1px solid var(--border);
 
-  /* ── SIDEBAR NAV ── */
-  .sidenav {
-    position: fixed; left:0; top:0;
-    width: 58px; height: 100vh;
-    background: rgba(5,13,21,0.9);
-    border-right: 1px solid var(--border);
-    display: flex; flex-direction: column;
-    align-items: center; padding: 20px 0;
-    gap: 8px; z-index: 100;
-    backdrop-filter: blur(10px);
-  }
-  .sidenav a {
-    width:40px; height:40px;
-    border-radius:10px;
-    display:flex; align-items:center; justify-content:center;
-    color: rgba(255,255,255,0.4);
-    text-decoration:none; font-size:18px;
-    transition: all 0.3s; cursor:pointer;
-    border: 1px solid transparent;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 🔥 items vertical center */
+  align-items: center;
+
+  padding: 20px 0;
+  gap: 8px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.sidenav a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
   .sidenav a:hover, .sidenav a.active {
     background: rgba(0,212,212,0.15);
     border-color: var(--border);
@@ -590,8 +604,8 @@
         </div>
         <div class="face back">
           <span class="face-icon">⚡</span>
-          <span class="face-label">Angular</span>
-          <span class="face-tech">TypeScript<br>SPA Apps</span>
+          <span class="face-label">Angular JS</span>
+          <span class="face-tech">TypeScript</span>
         </div>
         <div class="face right">
           <span class="face-icon">🔷</span>
@@ -606,12 +620,12 @@
         <div class="face top">
           <span class="face-icon">🗄️</span>
           <span class="face-label">Database</span>
-          <span class="face-tech">PostgreSQL<br>MSSQL</span>
+          <span class="face-tech">PostgreSQL<br>MYSQL<br>SQLite</span>
         </div>
         <div class="face bottom">
           <span class="face-icon">🌐</span>
           <span class="face-label">Frontend</span>
-          <span class="face-tech">HTML5 · CSS3<br>Bootstrap</span>
+          <span class="face-tech">HTML5 · CSS3<br>Bootstrap5</span>
         </div>
       </div>
     </div>
@@ -673,7 +687,7 @@
         <div class="stat-label">Tech Stacks</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">3+</div>
+        <div class="stat-num">1.5+</div>
         <div class="stat-label">Years Learning</div>
       </div>
       <div class="stat-card">
@@ -682,6 +696,9 @@
       </div>
     </div>
   </div>
+
+  <div class="scroll-btn" onclick="document.getElementById('skills').scrollIntoView()">↓</div>
+
 </section>
 
 <!-- SKILLS -->
@@ -734,6 +751,8 @@
       </div>
     </div>
   </div>
+  <div class="scroll-btn" onclick="document.getElementById('projects').scrollIntoView()">↓</div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -808,6 +827,8 @@
     </div>
 
   </div>
+  <div class="scroll-btn" onclick="document.getElementById('resume').scrollIntoView()">↓</div>
+
 </section>
 
 <!-- RESUME -->
@@ -820,6 +841,8 @@
       <a href="#" class="btn-outline">⬇ Download CV</a>
     </div>
   </div>
+  <div class="scroll-btn" onclick="document.getElementById('contact').scrollIntoView()">↓</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -871,6 +894,9 @@
     </div>
     <button class="btn-primary" style="width:100%;padding:14px;">Send Message 🚀</button>
   </div>
+
+  <div class="scroll-btn" onclick="document.getElementById('home').scrollIntoView()">↓</div>
+
 </section>
 
 </main>
